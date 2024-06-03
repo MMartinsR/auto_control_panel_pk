@@ -14,4 +14,8 @@ class Abastecimento {
   double autonomia() {
     return quilometragemRodada / quantidadeLitros;
   }
+
+  double valorPorLitro() {
+    return valorTotal / quantidadeLitros;
+  }
 }
