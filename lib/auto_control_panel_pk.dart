@@ -1,7 +1,17 @@
 library auto_control_panel_pk;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+class Abastecimento {
+  double valorTotal;
+  double quantidadeLitros;
+  int quilometragemRodada;
+
+  Abastecimento(
+    this.valorTotal,
+    this.quantidadeLitros,
+    this.quilometragemRodada,
+  );
+
+  double autonomia() {
+    return quilometragemRodada / quantidadeLitros;
+  }
 }
