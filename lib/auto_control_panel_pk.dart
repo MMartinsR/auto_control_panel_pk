@@ -1,6 +1,7 @@
 library auto_control_panel_pk;
 
 class Abastecimento {
+  String? id;
   double valorTotal;
   double quantidadeLitros;
   int quilometragemRodada;
