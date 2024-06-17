@@ -12,6 +12,12 @@ class Abastecimento {
     this.quilometragemRodada,
   );
 
+  // Abastecimento.(
+  //   this.valorTotal,
+  //   this.quantidadeLitros,
+  //   this.quilometragemRodada,
+  // );
+
   double autonomia() {
     return quilometragemRodada / quantidadeLitros;
   }
@@ -29,8 +35,10 @@ class Abastecimento {
     return somatorio / quant;
   }
 
-  static Abastecimento fromMap(Map<String, dynamic> map) {
-    return Abastecimento(
+  static Abastecimento fromMap(String id, Map<String, dynamic> map) {
+    var abast = Abastecimento(
         map['valorTotal'], map['quantidadeLitros'], map['quilometragemRodada']);
+    abast.id = id;
+    return abast;
   }
 }
