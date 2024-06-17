@@ -28,4 +28,9 @@ class Abastecimento {
     }
     return somatorio / quant;
   }
+
+  static Abastecimento fromMap(Map<String, dynamic> map) {
+    return Abastecimento(
+        map['valorTotal'], map['quantidadeLitros'], map['quilometragemRodada']);
+  }
 }
